@@ -28,18 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KaelPractice));
             this.groupBox_dataRecord = new System.Windows.Forms.GroupBox();
             this.pictureBox_Random = new System.Windows.Forms.PictureBox();
             this.pictureBox_1st = new System.Windows.Forms.PictureBox();
             this.pictureBox_2nd = new System.Windows.Forms.PictureBox();
             this.pictureBox_3th = new System.Windows.Forms.PictureBox();
             this.groupBox_manage = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.pictureBox_static = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.richTextBox_record = new System.Windows.Forms.RichTextBox();
@@ -49,11 +51,11 @@
             this.button_R = new System.Windows.Forms.Button();
             this.button_F = new System.Windows.Forms.Button();
             this.button_D = new System.Windows.Forms.Button();
+            this.imageListQWER = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Random)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_1st)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_2nd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_3th)).BeginInit();
-            this.groupBox_manage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_static)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,6 +78,7 @@
             // 
             // pictureBox_1st
             // 
+            this.pictureBox_1st.BackColor = System.Drawing.SystemColors.Control;
             this.pictureBox_1st.Location = new System.Drawing.Point(143, 271);
             this.pictureBox_1st.Name = "pictureBox_1st";
             this.pictureBox_1st.Size = new System.Drawing.Size(60, 60);
@@ -84,6 +87,7 @@
             // 
             // pictureBox_2nd
             // 
+            this.pictureBox_2nd.BackColor = System.Drawing.SystemColors.Control;
             this.pictureBox_2nd.Location = new System.Drawing.Point(225, 271);
             this.pictureBox_2nd.Name = "pictureBox_2nd";
             this.pictureBox_2nd.Size = new System.Drawing.Size(60, 60);
@@ -92,6 +96,7 @@
             // 
             // pictureBox_3th
             // 
+            this.pictureBox_3th.BackColor = System.Drawing.SystemColors.Control;
             this.pictureBox_3th.Location = new System.Drawing.Point(307, 271);
             this.pictureBox_3th.Name = "pictureBox_3th";
             this.pictureBox_3th.Size = new System.Drawing.Size(60, 60);
@@ -100,12 +105,6 @@
             // 
             // groupBox_manage
             // 
-            this.groupBox_manage.Controls.Add(this.label1);
-            this.groupBox_manage.Controls.Add(this.label2);
-            this.groupBox_manage.Controls.Add(this.label3);
-            this.groupBox_manage.Controls.Add(this.label4);
-            this.groupBox_manage.Controls.Add(this.label6);
-            this.groupBox_manage.Controls.Add(this.label5);
             this.groupBox_manage.Location = new System.Drawing.Point(12, 12);
             this.groupBox_manage.Name = "groupBox_manage";
             this.groupBox_manage.Size = new System.Drawing.Size(370, 122);
@@ -113,65 +112,66 @@
             this.groupBox_manage.TabStop = false;
             this.groupBox_manage.Text = "Management";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("微软雅黑 Light", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label5.Location = new System.Drawing.Point(253, 339);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(13, 16);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "F";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("微软雅黑 Light", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label6.Location = new System.Drawing.Point(316, 339);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(14, 16);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "R";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("微软雅黑 Light", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label4.Location = new System.Drawing.Point(190, 339);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(15, 16);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "D";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("微软雅黑 Light", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label3.Location = new System.Drawing.Point(127, 339);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(13, 16);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "E";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(23, 46);
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label1.Font = new System.Drawing.Font("微软雅黑 Light", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label1.Location = new System.Drawing.Point(1, 339);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(23, 21);
+            this.label1.Size = new System.Drawing.Size(16, 16);
             this.label1.TabIndex = 12;
             this.label1.Text = "Q";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label2.Location = new System.Drawing.Point(84, 46);
+            this.label2.Font = new System.Drawing.Font("微软雅黑 Light", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label2.Location = new System.Drawing.Point(63, 339);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(26, 21);
+            this.label2.Size = new System.Drawing.Size(18, 16);
             this.label2.TabIndex = 13;
             this.label2.Text = "W";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label3.Location = new System.Drawing.Point(145, 46);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(19, 21);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "E";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label4.Location = new System.Drawing.Point(206, 46);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(22, 21);
-            this.label4.TabIndex = 15;
-            this.label4.Text = "D";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label6.Location = new System.Drawing.Point(328, 46);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(20, 21);
-            this.label6.TabIndex = 17;
-            this.label6.Text = "R";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label5.Location = new System.Drawing.Point(267, 46);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(19, 21);
-            this.label5.TabIndex = 16;
-            this.label5.Text = "F";
             // 
             // pictureBox_static
             // 
@@ -202,64 +202,84 @@
             // 
             // button_Q
             // 
+            this.button_Q.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button_Q.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button_Q.Location = new System.Drawing.Point(12, 349);
             this.button_Q.Name = "button_Q";
             this.button_Q.Size = new System.Drawing.Size(50, 50);
             this.button_Q.TabIndex = 20;
             this.button_Q.UseVisualStyleBackColor = true;
-            this.button_Q.Click += new System.EventHandler(this.button_Q_Click);
+            this.button_Q.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.button_Q_KeyPress);
             // 
             // button_W
             // 
-            this.button_W.Location = new System.Drawing.Point(76, 349);
+            this.button_W.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_W.Location = new System.Drawing.Point(75, 349);
             this.button_W.Name = "button_W";
             this.button_W.Size = new System.Drawing.Size(50, 50);
             this.button_W.TabIndex = 21;
             this.button_W.UseVisualStyleBackColor = true;
-            this.button_W.Click += new System.EventHandler(this.button_W_Click);
+            this.button_W.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.button_W_KeyPress);
             // 
             // button_E
             // 
-            this.button_E.Location = new System.Drawing.Point(140, 349);
+            this.button_E.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_E.Location = new System.Drawing.Point(138, 349);
             this.button_E.Name = "button_E";
             this.button_E.Size = new System.Drawing.Size(50, 50);
             this.button_E.TabIndex = 22;
             this.button_E.UseVisualStyleBackColor = true;
-            this.button_E.Click += new System.EventHandler(this.button_E_Click);
+            this.button_E.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.button_E_KeyPress);
             // 
             // button_R
             // 
-            this.button_R.Location = new System.Drawing.Point(332, 349);
+            this.button_R.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_R.Location = new System.Drawing.Point(327, 349);
             this.button_R.Name = "button_R";
             this.button_R.Size = new System.Drawing.Size(50, 50);
             this.button_R.TabIndex = 25;
             this.button_R.UseVisualStyleBackColor = true;
-            this.button_R.Click += new System.EventHandler(this.button_R_Click);
+            this.button_R.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.button_R_KeyPress);
             // 
             // button_F
             // 
-            this.button_F.Location = new System.Drawing.Point(268, 349);
+            this.button_F.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_F.Location = new System.Drawing.Point(264, 349);
             this.button_F.Name = "button_F";
             this.button_F.Size = new System.Drawing.Size(50, 50);
             this.button_F.TabIndex = 24;
             this.button_F.UseVisualStyleBackColor = true;
-            this.button_F.Click += new System.EventHandler(this.button_F_Click);
             // 
             // button_D
             // 
-            this.button_D.Location = new System.Drawing.Point(204, 349);
+            this.button_D.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_D.Location = new System.Drawing.Point(201, 349);
             this.button_D.Name = "button_D";
             this.button_D.Size = new System.Drawing.Size(50, 50);
             this.button_D.TabIndex = 23;
             this.button_D.UseVisualStyleBackColor = true;
-            this.button_D.Click += new System.EventHandler(this.button_D_Click);
+            // 
+            // imageListQWER
+            // 
+            this.imageListQWER.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListQWER.ImageStream")));
+            this.imageListQWER.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageListQWER.Images.SetKeyName(0, "quas.png");
+            this.imageListQWER.Images.SetKeyName(1, "wex.png");
+            this.imageListQWER.Images.SetKeyName(2, "exort.png");
+            this.imageListQWER.Images.SetKeyName(3, "invoke.png");
             // 
             // KaelPractice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(653, 411);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button_R);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.button_F);
             this.Controls.Add(this.button_D);
             this.Controls.Add(this.button_E);
@@ -281,8 +301,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_1st)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_2nd)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_3th)).EndInit();
-            this.groupBox_manage.ResumeLayout(false);
-            this.groupBox_manage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_static)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -312,6 +330,7 @@
         private System.Windows.Forms.Button button_R;
         private System.Windows.Forms.Button button_F;
         private System.Windows.Forms.Button button_D;
+        private System.Windows.Forms.ImageList imageListQWER;
     }
 }
 
