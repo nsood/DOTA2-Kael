@@ -52,6 +52,7 @@
             this.button_F = new System.Windows.Forms.Button();
             this.button_D = new System.Windows.Forms.Button();
             this.imageListQWER = new System.Windows.Forms.ImageList(this.components);
+            this.imageListSKILL = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Random)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_1st)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_2nd)).BeginInit();
@@ -70,9 +71,11 @@
             // 
             // pictureBox_Random
             // 
-            this.pictureBox_Random.Location = new System.Drawing.Point(12, 140);
+            this.pictureBox_Random.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox_Random.Location = new System.Drawing.Point(12, 191);
             this.pictureBox_Random.Name = "pictureBox_Random";
-            this.pictureBox_Random.Size = new System.Drawing.Size(130, 130);
+            this.pictureBox_Random.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox_Random.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox_Random.TabIndex = 1;
             this.pictureBox_Random.TabStop = false;
             // 
@@ -115,69 +118,76 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("微软雅黑 Light", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label5.Location = new System.Drawing.Point(253, 339);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(13, 16);
+            this.label5.Size = new System.Drawing.Size(14, 17);
             this.label5.TabIndex = 16;
             this.label5.Text = "F";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("微软雅黑 Light", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label6.Location = new System.Drawing.Point(316, 339);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(14, 16);
+            this.label6.Size = new System.Drawing.Size(16, 17);
             this.label6.TabIndex = 17;
             this.label6.Text = "R";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("微软雅黑 Light", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label4.Location = new System.Drawing.Point(190, 339);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(15, 16);
+            this.label4.Size = new System.Drawing.Size(17, 17);
             this.label4.TabIndex = 15;
             this.label4.Text = "D";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("微软雅黑 Light", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label3.Location = new System.Drawing.Point(127, 339);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(13, 16);
+            this.label3.Size = new System.Drawing.Size(15, 17);
             this.label3.TabIndex = 14;
             this.label3.Text = "E";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label1.Font = new System.Drawing.Font("微软雅黑 Light", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label1.Location = new System.Drawing.Point(1, 339);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(16, 16);
+            this.label1.Size = new System.Drawing.Size(18, 17);
             this.label1.TabIndex = 12;
             this.label1.Text = "Q";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("微软雅黑 Light", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label2.Location = new System.Drawing.Point(63, 339);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label2.Location = new System.Drawing.Point(61, 339);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(18, 16);
+            this.label2.Size = new System.Drawing.Size(20, 17);
             this.label2.TabIndex = 13;
             this.label2.Text = "W";
             // 
             // pictureBox_static
             // 
-            this.pictureBox_static.Location = new System.Drawing.Point(162, 146);
+            this.pictureBox_static.Location = new System.Drawing.Point(157, 140);
             this.pictureBox_static.Name = "pictureBox_static";
             this.pictureBox_static.Size = new System.Drawing.Size(220, 107);
+            this.pictureBox_static.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox_static.TabIndex = 18;
             this.pictureBox_static.TabStop = false;
             // 
@@ -267,11 +277,28 @@
             this.imageListQWER.Images.SetKeyName(1, "wex.png");
             this.imageListQWER.Images.SetKeyName(2, "exort.png");
             this.imageListQWER.Images.SetKeyName(3, "invoke.png");
+            this.imageListQWER.Images.SetKeyName(4, "blank.gif");
+            // 
+            // imageListSKILL
+            // 
+            this.imageListSKILL.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListSKILL.ImageStream")));
+            this.imageListSKILL.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageListSKILL.Images.SetKeyName(0, "cold_snap.png");
+            this.imageListSKILL.Images.SetKeyName(1, "emp.png");
+            this.imageListSKILL.Images.SetKeyName(2, "sun_strike.png");
+            this.imageListSKILL.Images.SetKeyName(3, "ghost_walk.png");
+            this.imageListSKILL.Images.SetKeyName(4, "ice_wall.png");
+            this.imageListSKILL.Images.SetKeyName(5, "tornado.png");
+            this.imageListSKILL.Images.SetKeyName(6, "alacrity.png");
+            this.imageListSKILL.Images.SetKeyName(7, "forge_spirit.png");
+            this.imageListSKILL.Images.SetKeyName(8, "chaos_meteor.png");
+            this.imageListSKILL.Images.SetKeyName(9, "deafening_blast.png");
             // 
             // KaelPractice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(653, 411);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -331,6 +358,7 @@
         private System.Windows.Forms.Button button_F;
         private System.Windows.Forms.Button button_D;
         private System.Windows.Forms.ImageList imageListQWER;
+        private System.Windows.Forms.ImageList imageListSKILL;
     }
 }
 
