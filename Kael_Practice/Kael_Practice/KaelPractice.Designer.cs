@@ -72,7 +72,7 @@
             // pictureBox_Random
             // 
             this.pictureBox_Random.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox_Random.Location = new System.Drawing.Point(12, 191);
+            this.pictureBox_Random.Location = new System.Drawing.Point(23, 195);
             this.pictureBox_Random.Name = "pictureBox_Random";
             this.pictureBox_Random.Size = new System.Drawing.Size(100, 100);
             this.pictureBox_Random.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -82,29 +82,32 @@
             // pictureBox_1st
             // 
             this.pictureBox_1st.BackColor = System.Drawing.SystemColors.Control;
-            this.pictureBox_1st.Location = new System.Drawing.Point(143, 271);
+            this.pictureBox_1st.Location = new System.Drawing.Point(171, 276);
             this.pictureBox_1st.Name = "pictureBox_1st";
             this.pictureBox_1st.Size = new System.Drawing.Size(60, 60);
             this.pictureBox_1st.TabIndex = 8;
             this.pictureBox_1st.TabStop = false;
+            this.pictureBox_1st.Tag = "";
             // 
             // pictureBox_2nd
             // 
             this.pictureBox_2nd.BackColor = System.Drawing.SystemColors.Control;
-            this.pictureBox_2nd.Location = new System.Drawing.Point(225, 271);
+            this.pictureBox_2nd.Location = new System.Drawing.Point(238, 276);
             this.pictureBox_2nd.Name = "pictureBox_2nd";
             this.pictureBox_2nd.Size = new System.Drawing.Size(60, 60);
             this.pictureBox_2nd.TabIndex = 9;
             this.pictureBox_2nd.TabStop = false;
+            this.pictureBox_2nd.Tag = "";
             // 
             // pictureBox_3th
             // 
             this.pictureBox_3th.BackColor = System.Drawing.SystemColors.Control;
-            this.pictureBox_3th.Location = new System.Drawing.Point(307, 271);
+            this.pictureBox_3th.Location = new System.Drawing.Point(305, 276);
             this.pictureBox_3th.Name = "pictureBox_3th";
             this.pictureBox_3th.Size = new System.Drawing.Size(60, 60);
             this.pictureBox_3th.TabIndex = 10;
             this.pictureBox_3th.TabStop = false;
+            this.pictureBox_3th.Tag = "";
             // 
             // groupBox_manage
             // 
@@ -184,9 +187,9 @@
             // 
             // pictureBox_static
             // 
-            this.pictureBox_static.Location = new System.Drawing.Point(157, 140);
+            this.pictureBox_static.Location = new System.Drawing.Point(138, 140);
             this.pictureBox_static.Name = "pictureBox_static";
-            this.pictureBox_static.Size = new System.Drawing.Size(220, 107);
+            this.pictureBox_static.Size = new System.Drawing.Size(239, 130);
             this.pictureBox_static.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox_static.TabIndex = 18;
             this.pictureBox_static.TabStop = false;
@@ -219,7 +222,6 @@
             this.button_Q.Size = new System.Drawing.Size(50, 50);
             this.button_Q.TabIndex = 20;
             this.button_Q.UseVisualStyleBackColor = true;
-            this.button_Q.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.button_Q_KeyPress);
             // 
             // button_W
             // 
@@ -229,7 +231,6 @@
             this.button_W.Size = new System.Drawing.Size(50, 50);
             this.button_W.TabIndex = 21;
             this.button_W.UseVisualStyleBackColor = true;
-            this.button_W.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.button_W_KeyPress);
             // 
             // button_E
             // 
@@ -239,7 +240,6 @@
             this.button_E.Size = new System.Drawing.Size(50, 50);
             this.button_E.TabIndex = 22;
             this.button_E.UseVisualStyleBackColor = true;
-            this.button_E.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.button_E_KeyPress);
             // 
             // button_R
             // 
@@ -249,7 +249,6 @@
             this.button_R.Size = new System.Drawing.Size(50, 50);
             this.button_R.TabIndex = 25;
             this.button_R.UseVisualStyleBackColor = true;
-            this.button_R.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.button_R_KeyPress);
             // 
             // button_F
             // 
