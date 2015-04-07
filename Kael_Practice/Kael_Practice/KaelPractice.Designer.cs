@@ -324,6 +324,7 @@
             this.KeyPreview = true;
             this.Name = "KaelPractice";
             this.Load += new System.EventHandler(this.KaelPractice_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KaelPractice_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Random)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_1st)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_2nd)).EndInit();

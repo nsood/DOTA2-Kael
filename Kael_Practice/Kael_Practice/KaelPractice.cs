@@ -32,41 +32,33 @@ namespace Kael_Practice
             pictureBox_Random.Image = imageListSKILL.Images[rand.Next(10)];
         }
 
-        private void exchangePicture(Image i)
-        {
-            pictureBox_1st.Image = pictureBox_2nd.Image;
-            pictureBox_2nd.Image = pictureBox_3th.Image;
-            pictureBox_3th.Image = i;
-            this.Refresh();
-        }
-
-        private int keyPressCount()
-        {
-            return KeyPressCount++;
-        }
-
         private void button_Q_KeyPress(object sender, KeyPressEventArgs e)
         {
-            pictureBox_Random.Image = imageListSKILL.Images[rand.Next(10)];
-            exchangePicture(button_Q.Image);
-            keyPressCount();
+
         }
 
         private void button_W_KeyPress(object sender, KeyPressEventArgs e)
         {
-            exchangePicture(button_W.Image);
-            keyPressCount();
+
         }
 
         private void button_E_KeyPress(object sender, KeyPressEventArgs e)
         {
-            exchangePicture(button_E.Image);
-            keyPressCount();
+
         }
 
         private void button_R_KeyPress(object sender, KeyPressEventArgs e)
         {
-            keyPressCount();
+
+        }
+
+        private void KaelPractice_KeyDown(object sender, KeyEventArgs e)
+        {
+            if ((Keys)e.KeyCode == Keys.Q)
+            {
+                pictureBox_Random.Image = imageListSKILL.Images[rand.Next(10)];
+                this.Refresh();
+            }
         }
     }
 }
