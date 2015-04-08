@@ -16,6 +16,7 @@ namespace Kael_Practice
         public int KeyPressCount = 0;
         public int RightSkillCount = 0;
         public int WrongSkillCount = 0;
+        public int RightNumPer15 = 0;
         //技能值无顺序乘性组合，为三个基础技能点定义质数值；
         public int Qvalue = 1;  
         public int Wvalue = 3;
@@ -89,19 +90,26 @@ namespace Kael_Practice
             Rvalue = (int)pictureBox_1st.Tag * (int)pictureBox_2nd.Tag * (int)pictureBox_3th.Tag;
             if (Rvalue == SkillValue)
             {
+                RightNumPer15++;
                 richTextBox_record.Text += "●";
                 RightSkillCount++;
+                skillRandom();
             }
             else
             {
                 richTextBox_record.Text += "〇";  
                 WrongSkillCount++;
             }
-            if ((RightSkillCount+WrongSkillCount) % 10 == 0)
+            if ((RightSkillCount+WrongSkillCount) % 15 == 0)
             {
+                richTextBox_record.Text+= '\t';
+                richTextBox_record.Text += (RightNumPer15 % 15).ToString();
+                richTextBox_record.Text += " / 15";
                 richTextBox_record.Text += '\n';
+                RightNumPer15 = 0;
             }
             richTextBox_record.SelectionStart += richTextBox_record.Text.Length;
+
         }
 
         private void KaelPractice_KeyDown(object sender, KeyEventArgs e)
