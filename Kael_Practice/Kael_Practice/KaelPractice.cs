@@ -17,7 +17,7 @@ namespace Kael_Practice
         public int KeyPressCount = 0;
         public int RightSkillCount = 0;
         public int WrongSkillCount = 0;
-        public int RightNumPer15 = 0;
+        public int RightNumPer10 = 0;
         //技能值无顺序乘性组合，为三个基础技能点定义质数值；
         public int Qvalue = 1;  
         public int Wvalue = 3;
@@ -26,6 +26,8 @@ namespace Kael_Practice
         public int Rvalue = 1;        //定义技能初始乘值
         public int SkillValue = 0;        //定义技能随机值，由乘性法则规定
 
+        public UInt64 time = 0;
+    
         public KaelPractice()
         {
             InitializeComponent();
@@ -60,6 +62,9 @@ namespace Kael_Practice
             //初始化技能图片下标值
             button_D.Tag = 10;
             button_F.Tag = 10;
+            //初始化数据记录空间绑定的数据tag
+            label_key.Tag = 0;
+            label_APM_valid.Tag = 0;
             skillRandom();
         }
 
@@ -130,6 +135,25 @@ namespace Kael_Practice
             button_D.Image = imageListDF.Images[(int)button_D.Tag];
             button_F.Image = imageListDF.Images[(int)button_F.Tag];
         }
+
+        private void dateRerord()
+        {
+            int doubleNum1, doubleNum2;
+            double tmp;
+            label_key_count.Text = KeyPressCount.ToString();
+            label_right_R_count.Text = RightSkillCount.ToString();
+            label_wrong_R_count.Text = WrongSkillCount.ToString();
+            //按键有效率：    生成的技能数*4（正常而言生成一个技能需要四次按键） 除以 总按键数；
+            //                这里的有效率指的是按键生成技能的有效性，而不是生成正确技能的比例；
+            tmp = Convert.ToDouble(RightSkillCount + WrongSkillCount) / KeyPressCount * 4;
+            doubleNum1 = Convert.ToInt32(tmp * 10000) / 100;
+            doubleNum2 = Convert.ToInt32(tmp * 10000) % 100;
+            label_valid_rate_count.Text = doubleNum1.ToString()+'.'+doubleNum2.ToString() + '%';
+
+            
+ 
+        }
+
         private void checkCorrect()
         {
             //技能组合检测匹配
@@ -137,7 +161,7 @@ namespace Kael_Practice
             skillChanged();
             if (Rvalue == SkillValue)
             {
-                RightNumPer15++;
+                RightNumPer10++;
                 richTextBox_record.Text += "●";
                 RightSkillCount++;
                 skillRandom();
@@ -147,16 +171,16 @@ namespace Kael_Practice
                 richTextBox_record.Text += "〇";  
                 WrongSkillCount++;
             }
-            if ((RightSkillCount+WrongSkillCount) % 15 == 0)
+            if ((RightSkillCount+WrongSkillCount) % 10 == 0)
             {
                 richTextBox_record.Text+= '\t';
-                richTextBox_record.Text += (RightNumPer15 % 15).ToString();
-                richTextBox_record.Text += " / 15";
+                richTextBox_record.Text += RightNumPer10;
+                richTextBox_record.Text += " / 10";
                 richTextBox_record.Text += '\n';
-                RightNumPer15 = 0;
+                RightNumPer10 = 0;
             }
             richTextBox_record.SelectionStart += richTextBox_record.Text.Length;
-
+            dateRerord();
         }
 
         private void KaelPractice_KeyDown(object sender, KeyEventArgs e)
@@ -186,6 +210,23 @@ namespace Kael_Practice
             }
 
             this.Refresh();
+        }
+
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            int tmp=0;
+            time++;
+            label_time_count.Text = (time / 10).ToString() + '.' + (time%10).ToString()+" s";
+            if(time%100==0)
+            {
+                tmp = KeyPressCount - (int)(label_key.Tag);
+                label_APM_count.Text = (tmp * 6).ToString();
+                label_key.Tag = KeyPressCount;
+
+                tmp = RightSkillCount - (int)(label_APM_valid.Tag);
+                label_APM_valid_count.Text = (tmp * 24).ToString();
+                label_APM_valid.Tag = RightSkillCount;
+            }
         }
     }
 }

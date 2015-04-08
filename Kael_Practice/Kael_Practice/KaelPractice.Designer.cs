@@ -31,6 +31,20 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KaelPractice));
             this.groupBox_dataRecord = new System.Windows.Forms.GroupBox();
+            this.label_time_count = new System.Windows.Forms.Label();
+            this.label_APM_valid_count = new System.Windows.Forms.Label();
+            this.label_APM_count = new System.Windows.Forms.Label();
+            this.label_valid_rate_count = new System.Windows.Forms.Label();
+            this.label_wrong_R_count = new System.Windows.Forms.Label();
+            this.label_right_R_count = new System.Windows.Forms.Label();
+            this.label_key_count = new System.Windows.Forms.Label();
+            this.label_time = new System.Windows.Forms.Label();
+            this.label_APM_valid = new System.Windows.Forms.Label();
+            this.label_APM = new System.Windows.Forms.Label();
+            this.label_valid_rate = new System.Windows.Forms.Label();
+            this.label_wrong_R = new System.Windows.Forms.Label();
+            this.label_right_R = new System.Windows.Forms.Label();
+            this.label_key = new System.Windows.Forms.Label();
             this.groupBox_manage = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -54,6 +68,8 @@
             this.pictureBox_2nd = new System.Windows.Forms.PictureBox();
             this.pictureBox_1st = new System.Windows.Forms.PictureBox();
             this.pictureBox_Random = new System.Windows.Forms.PictureBox();
+            this.timer = new System.Windows.Forms.Timer(this.components);
+            this.groupBox_dataRecord.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_static)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_3th)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_2nd)).BeginInit();
@@ -63,12 +79,146 @@
             // 
             // groupBox_dataRecord
             // 
+            this.groupBox_dataRecord.Controls.Add(this.label_time_count);
+            this.groupBox_dataRecord.Controls.Add(this.label_APM_valid_count);
+            this.groupBox_dataRecord.Controls.Add(this.label_APM_count);
+            this.groupBox_dataRecord.Controls.Add(this.label_valid_rate_count);
+            this.groupBox_dataRecord.Controls.Add(this.label_wrong_R_count);
+            this.groupBox_dataRecord.Controls.Add(this.label_right_R_count);
+            this.groupBox_dataRecord.Controls.Add(this.label_key_count);
+            this.groupBox_dataRecord.Controls.Add(this.label_time);
+            this.groupBox_dataRecord.Controls.Add(this.label_APM_valid);
+            this.groupBox_dataRecord.Controls.Add(this.label_APM);
+            this.groupBox_dataRecord.Controls.Add(this.label_valid_rate);
+            this.groupBox_dataRecord.Controls.Add(this.label_wrong_R);
+            this.groupBox_dataRecord.Controls.Add(this.label_right_R);
+            this.groupBox_dataRecord.Controls.Add(this.label_key);
             this.groupBox_dataRecord.Location = new System.Drawing.Point(388, 12);
             this.groupBox_dataRecord.Name = "groupBox_dataRecord";
-            this.groupBox_dataRecord.Size = new System.Drawing.Size(261, 198);
+            this.groupBox_dataRecord.Size = new System.Drawing.Size(222, 198);
             this.groupBox_dataRecord.TabIndex = 0;
             this.groupBox_dataRecord.TabStop = false;
-            this.groupBox_dataRecord.Text = "dataRecord";
+            this.groupBox_dataRecord.Text = "数据记录";
+            // 
+            // label_time_count
+            // 
+            this.label_time_count.AutoSize = true;
+            this.label_time_count.Location = new System.Drawing.Point(120, 178);
+            this.label_time_count.Name = "label_time_count";
+            this.label_time_count.Size = new System.Drawing.Size(0, 12);
+            this.label_time_count.TabIndex = 13;
+            // 
+            // label_APM_valid_count
+            // 
+            this.label_APM_valid_count.AutoSize = true;
+            this.label_APM_valid_count.Location = new System.Drawing.Point(120, 153);
+            this.label_APM_valid_count.Name = "label_APM_valid_count";
+            this.label_APM_valid_count.Size = new System.Drawing.Size(0, 12);
+            this.label_APM_valid_count.TabIndex = 12;
+            // 
+            // label_APM_count
+            // 
+            this.label_APM_count.AutoSize = true;
+            this.label_APM_count.Location = new System.Drawing.Point(120, 128);
+            this.label_APM_count.Name = "label_APM_count";
+            this.label_APM_count.Size = new System.Drawing.Size(0, 12);
+            this.label_APM_count.TabIndex = 11;
+            // 
+            // label_valid_rate_count
+            // 
+            this.label_valid_rate_count.AutoSize = true;
+            this.label_valid_rate_count.Location = new System.Drawing.Point(120, 103);
+            this.label_valid_rate_count.Name = "label_valid_rate_count";
+            this.label_valid_rate_count.Size = new System.Drawing.Size(0, 12);
+            this.label_valid_rate_count.TabIndex = 10;
+            // 
+            // label_wrong_R_count
+            // 
+            this.label_wrong_R_count.AutoSize = true;
+            this.label_wrong_R_count.Location = new System.Drawing.Point(120, 78);
+            this.label_wrong_R_count.Name = "label_wrong_R_count";
+            this.label_wrong_R_count.Size = new System.Drawing.Size(0, 12);
+            this.label_wrong_R_count.TabIndex = 9;
+            // 
+            // label_right_R_count
+            // 
+            this.label_right_R_count.AutoSize = true;
+            this.label_right_R_count.Location = new System.Drawing.Point(120, 53);
+            this.label_right_R_count.Name = "label_right_R_count";
+            this.label_right_R_count.Size = new System.Drawing.Size(0, 12);
+            this.label_right_R_count.TabIndex = 8;
+            // 
+            // label_key_count
+            // 
+            this.label_key_count.AutoSize = true;
+            this.label_key_count.Location = new System.Drawing.Point(120, 28);
+            this.label_key_count.Name = "label_key_count";
+            this.label_key_count.Size = new System.Drawing.Size(0, 12);
+            this.label_key_count.TabIndex = 7;
+            // 
+            // label_time
+            // 
+            this.label_time.AutoSize = true;
+            this.label_time.Location = new System.Drawing.Point(33, 178);
+            this.label_time.Name = "label_time";
+            this.label_time.Size = new System.Drawing.Size(65, 12);
+            this.label_time.TabIndex = 6;
+            this.label_time.Text = "时间计数：";
+            // 
+            // label_APM_valid
+            // 
+            this.label_APM_valid.AutoSize = true;
+            this.label_APM_valid.Location = new System.Drawing.Point(39, 153);
+            this.label_APM_valid.Name = "label_APM_valid";
+            this.label_APM_valid.Size = new System.Drawing.Size(59, 12);
+            this.label_APM_valid.TabIndex = 5;
+            this.label_APM_valid.Text = "有效APM：";
+            // 
+            // label_APM
+            // 
+            this.label_APM.AutoSize = true;
+            this.label_APM.Location = new System.Drawing.Point(51, 128);
+            this.label_APM.Name = "label_APM";
+            this.label_APM.Size = new System.Drawing.Size(47, 12);
+            this.label_APM.TabIndex = 4;
+            this.label_APM.Text = "总APM：";
+            // 
+            // label_valid_rate
+            // 
+            this.label_valid_rate.AutoSize = true;
+            this.label_valid_rate.Location = new System.Drawing.Point(21, 103);
+            this.label_valid_rate.Name = "label_valid_rate";
+            this.label_valid_rate.Size = new System.Drawing.Size(77, 12);
+            this.label_valid_rate.TabIndex = 3;
+            this.label_valid_rate.Text = "按键有效率：";
+            // 
+            // label_wrong_R
+            // 
+            this.label_wrong_R.AutoSize = true;
+            this.label_wrong_R.Location = new System.Drawing.Point(9, 78);
+            this.label_wrong_R.Name = "label_wrong_R";
+            this.label_wrong_R.Size = new System.Drawing.Size(89, 12);
+            this.label_wrong_R.TabIndex = 2;
+            this.label_wrong_R.Text = "错误技能总数：";
+            // 
+            // label_right_R
+            // 
+            this.label_right_R.AutoSize = true;
+            this.label_right_R.Location = new System.Drawing.Point(9, 53);
+            this.label_right_R.Name = "label_right_R";
+            this.label_right_R.Size = new System.Drawing.Size(89, 12);
+            this.label_right_R.TabIndex = 1;
+            this.label_right_R.Text = "正确技能总数：";
+            // 
+            // label_key
+            // 
+            this.label_key.AutoSize = true;
+            this.label_key.Location = new System.Drawing.Point(33, 28);
+            this.label_key.Name = "label_key";
+            this.label_key.Size = new System.Drawing.Size(65, 12);
+            this.label_key.TabIndex = 0;
+            this.label_key.Tag = "1";
+            this.label_key.Text = "总按键数：";
             // 
             // groupBox_manage
             // 
@@ -77,7 +227,7 @@
             this.groupBox_manage.Size = new System.Drawing.Size(370, 110);
             this.groupBox_manage.TabIndex = 11;
             this.groupBox_manage.TabStop = false;
-            this.groupBox_manage.Text = "Management";
+            this.groupBox_manage.Text = "模式设置";
             // 
             // label5
             // 
@@ -161,7 +311,7 @@
             this.richTextBox_record.Location = new System.Drawing.Point(388, 216);
             this.richTextBox_record.Name = "richTextBox_record";
             this.richTextBox_record.ReadOnly = true;
-            this.richTextBox_record.Size = new System.Drawing.Size(261, 141);
+            this.richTextBox_record.Size = new System.Drawing.Size(222, 141);
             this.richTextBox_record.TabIndex = 0;
             this.richTextBox_record.Text = "";
             // 
@@ -317,12 +467,17 @@
             this.pictureBox_Random.TabIndex = 1;
             this.pictureBox_Random.TabStop = false;
             // 
+            // timer
+            // 
+            this.timer.Enabled = true;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            // 
             // KaelPractice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(653, 361);
+            this.ClientSize = new System.Drawing.Size(619, 361);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label1);
@@ -348,6 +503,8 @@
             this.Name = "KaelPractice";
             this.Load += new System.EventHandler(this.KaelPractice_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KaelPractice_KeyDown);
+            this.groupBox_dataRecord.ResumeLayout(false);
+            this.groupBox_dataRecord.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_static)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_3th)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_2nd)).EndInit();
@@ -384,6 +541,21 @@
         private System.Windows.Forms.ImageList imageListQWER;
         private System.Windows.Forms.ImageList imageListSKILL;
         private System.Windows.Forms.ImageList imageListDF;
+        private System.Windows.Forms.Label label_APM;
+        private System.Windows.Forms.Label label_valid_rate;
+        private System.Windows.Forms.Label label_wrong_R;
+        private System.Windows.Forms.Label label_right_R;
+        private System.Windows.Forms.Label label_key;
+        private System.Windows.Forms.Label label_APM_valid;
+        private System.Windows.Forms.Label label_time;
+        private System.Windows.Forms.Label label_time_count;
+        private System.Windows.Forms.Label label_APM_valid_count;
+        private System.Windows.Forms.Label label_APM_count;
+        private System.Windows.Forms.Label label_valid_rate_count;
+        private System.Windows.Forms.Label label_wrong_R_count;
+        private System.Windows.Forms.Label label_right_R_count;
+        private System.Windows.Forms.Label label_key_count;
+        private System.Windows.Forms.Timer timer;
     }
 }
 
