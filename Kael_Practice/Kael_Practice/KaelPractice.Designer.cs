@@ -31,10 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KaelPractice));
             this.groupBox_dataRecord = new System.Windows.Forms.GroupBox();
-            this.pictureBox_Random = new System.Windows.Forms.PictureBox();
-            this.pictureBox_1st = new System.Windows.Forms.PictureBox();
-            this.pictureBox_2nd = new System.Windows.Forms.PictureBox();
-            this.pictureBox_3th = new System.Windows.Forms.PictureBox();
             this.groupBox_manage = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -42,7 +38,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox_static = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.richTextBox_record = new System.Windows.Forms.RichTextBox();
             this.button_Q = new System.Windows.Forms.Button();
@@ -54,67 +49,32 @@
             this.imageListQWER = new System.Windows.Forms.ImageList(this.components);
             this.imageListSKILL = new System.Windows.Forms.ImageList(this.components);
             this.imageListDF = new System.Windows.Forms.ImageList(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Random)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_1st)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_2nd)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_3th)).BeginInit();
+            this.pictureBox_static = new System.Windows.Forms.PictureBox();
+            this.pictureBox_3th = new System.Windows.Forms.PictureBox();
+            this.pictureBox_2nd = new System.Windows.Forms.PictureBox();
+            this.pictureBox_1st = new System.Windows.Forms.PictureBox();
+            this.pictureBox_Random = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_static)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_3th)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_2nd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_1st)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Random)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox_dataRecord
             // 
             this.groupBox_dataRecord.Location = new System.Drawing.Point(388, 12);
             this.groupBox_dataRecord.Name = "groupBox_dataRecord";
-            this.groupBox_dataRecord.Size = new System.Drawing.Size(253, 232);
+            this.groupBox_dataRecord.Size = new System.Drawing.Size(261, 198);
             this.groupBox_dataRecord.TabIndex = 0;
             this.groupBox_dataRecord.TabStop = false;
             this.groupBox_dataRecord.Text = "dataRecord";
-            // 
-            // pictureBox_Random
-            // 
-            this.pictureBox_Random.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox_Random.Location = new System.Drawing.Point(23, 195);
-            this.pictureBox_Random.Name = "pictureBox_Random";
-            this.pictureBox_Random.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox_Random.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox_Random.TabIndex = 1;
-            this.pictureBox_Random.TabStop = false;
-            // 
-            // pictureBox_1st
-            // 
-            this.pictureBox_1st.BackColor = System.Drawing.SystemColors.Control;
-            this.pictureBox_1st.Location = new System.Drawing.Point(171, 276);
-            this.pictureBox_1st.Name = "pictureBox_1st";
-            this.pictureBox_1st.Size = new System.Drawing.Size(60, 60);
-            this.pictureBox_1st.TabIndex = 8;
-            this.pictureBox_1st.TabStop = false;
-            this.pictureBox_1st.Tag = "";
-            // 
-            // pictureBox_2nd
-            // 
-            this.pictureBox_2nd.BackColor = System.Drawing.SystemColors.Control;
-            this.pictureBox_2nd.Location = new System.Drawing.Point(238, 276);
-            this.pictureBox_2nd.Name = "pictureBox_2nd";
-            this.pictureBox_2nd.Size = new System.Drawing.Size(60, 60);
-            this.pictureBox_2nd.TabIndex = 9;
-            this.pictureBox_2nd.TabStop = false;
-            this.pictureBox_2nd.Tag = "";
-            // 
-            // pictureBox_3th
-            // 
-            this.pictureBox_3th.BackColor = System.Drawing.SystemColors.Control;
-            this.pictureBox_3th.Location = new System.Drawing.Point(305, 276);
-            this.pictureBox_3th.Name = "pictureBox_3th";
-            this.pictureBox_3th.Size = new System.Drawing.Size(60, 60);
-            this.pictureBox_3th.TabIndex = 10;
-            this.pictureBox_3th.TabStop = false;
-            this.pictureBox_3th.Tag = "";
             // 
             // groupBox_manage
             // 
             this.groupBox_manage.Location = new System.Drawing.Point(12, 12);
             this.groupBox_manage.Name = "groupBox_manage";
-            this.groupBox_manage.Size = new System.Drawing.Size(370, 122);
+            this.groupBox_manage.Size = new System.Drawing.Size(370, 110);
             this.groupBox_manage.TabIndex = 11;
             this.groupBox_manage.TabStop = false;
             this.groupBox_manage.Text = "Management";
@@ -124,7 +84,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label5.Location = new System.Drawing.Point(253, 339);
+            this.label5.Location = new System.Drawing.Point(253, 297);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(14, 17);
             this.label5.TabIndex = 16;
@@ -135,7 +95,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label6.Location = new System.Drawing.Point(316, 339);
+            this.label6.Location = new System.Drawing.Point(316, 297);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(16, 17);
             this.label6.TabIndex = 17;
@@ -146,7 +106,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label4.Location = new System.Drawing.Point(190, 339);
+            this.label4.Location = new System.Drawing.Point(190, 297);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(17, 17);
             this.label4.TabIndex = 15;
@@ -157,7 +117,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label3.Location = new System.Drawing.Point(127, 339);
+            this.label3.Location = new System.Drawing.Point(127, 297);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(15, 17);
             this.label3.TabIndex = 14;
@@ -169,7 +129,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(1, 339);
+            this.label1.Location = new System.Drawing.Point(1, 297);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(18, 17);
             this.label1.TabIndex = 12;
@@ -180,37 +140,28 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label2.Location = new System.Drawing.Point(61, 339);
+            this.label2.Location = new System.Drawing.Point(61, 297);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(20, 17);
             this.label2.TabIndex = 13;
             this.label2.Text = "W";
-            // 
-            // pictureBox_static
-            // 
-            this.pictureBox_static.Location = new System.Drawing.Point(138, 140);
-            this.pictureBox_static.Name = "pictureBox_static";
-            this.pictureBox_static.Size = new System.Drawing.Size(239, 130);
-            this.pictureBox_static.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox_static.TabIndex = 18;
-            this.pictureBox_static.TabStop = false;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label7.Location = new System.Drawing.Point(17, 294);
+            this.label7.Location = new System.Drawing.Point(17, 252);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(0, 24);
             this.label7.TabIndex = 19;
             // 
             // richTextBox_record
             // 
-            this.richTextBox_record.Location = new System.Drawing.Point(388, 250);
+            this.richTextBox_record.Location = new System.Drawing.Point(388, 216);
             this.richTextBox_record.Name = "richTextBox_record";
             this.richTextBox_record.ReadOnly = true;
-            this.richTextBox_record.Size = new System.Drawing.Size(253, 149);
+            this.richTextBox_record.Size = new System.Drawing.Size(261, 141);
             this.richTextBox_record.TabIndex = 0;
             this.richTextBox_record.Text = "";
             // 
@@ -218,7 +169,7 @@
             // 
             this.button_Q.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button_Q.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_Q.Location = new System.Drawing.Point(12, 349);
+            this.button_Q.Location = new System.Drawing.Point(12, 307);
             this.button_Q.Name = "button_Q";
             this.button_Q.Size = new System.Drawing.Size(50, 50);
             this.button_Q.TabIndex = 20;
@@ -227,7 +178,7 @@
             // button_W
             // 
             this.button_W.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_W.Location = new System.Drawing.Point(75, 349);
+            this.button_W.Location = new System.Drawing.Point(75, 307);
             this.button_W.Name = "button_W";
             this.button_W.Size = new System.Drawing.Size(50, 50);
             this.button_W.TabIndex = 21;
@@ -236,7 +187,7 @@
             // button_E
             // 
             this.button_E.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_E.Location = new System.Drawing.Point(138, 349);
+            this.button_E.Location = new System.Drawing.Point(138, 307);
             this.button_E.Name = "button_E";
             this.button_E.Size = new System.Drawing.Size(50, 50);
             this.button_E.TabIndex = 22;
@@ -245,7 +196,7 @@
             // button_R
             // 
             this.button_R.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_R.Location = new System.Drawing.Point(327, 349);
+            this.button_R.Location = new System.Drawing.Point(327, 307);
             this.button_R.Name = "button_R";
             this.button_R.Size = new System.Drawing.Size(50, 50);
             this.button_R.TabIndex = 25;
@@ -255,7 +206,7 @@
             // 
             this.button_F.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button_F.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_F.Location = new System.Drawing.Point(264, 349);
+            this.button_F.Location = new System.Drawing.Point(264, 307);
             this.button_F.Name = "button_F";
             this.button_F.Size = new System.Drawing.Size(50, 50);
             this.button_F.TabIndex = 24;
@@ -265,7 +216,7 @@
             // 
             this.button_D.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button_D.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_D.Location = new System.Drawing.Point(201, 349);
+            this.button_D.Location = new System.Drawing.Point(201, 307);
             this.button_D.Name = "button_D";
             this.button_D.Size = new System.Drawing.Size(50, 50);
             this.button_D.TabIndex = 23;
@@ -313,12 +264,65 @@
             this.imageListDF.Images.SetKeyName(9, "deafening_blast.png");
             this.imageListDF.Images.SetKeyName(10, "blank.gif");
             // 
+            // pictureBox_static
+            // 
+            this.pictureBox_static.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox_static.Location = new System.Drawing.Point(172, 128);
+            this.pictureBox_static.Name = "pictureBox_static";
+            this.pictureBox_static.Size = new System.Drawing.Size(210, 100);
+            this.pictureBox_static.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox_static.TabIndex = 18;
+            this.pictureBox_static.TabStop = false;
+            // 
+            // pictureBox_3th
+            // 
+            this.pictureBox_3th.BackColor = System.Drawing.SystemColors.Control;
+            this.pictureBox_3th.Location = new System.Drawing.Point(316, 234);
+            this.pictureBox_3th.Name = "pictureBox_3th";
+            this.pictureBox_3th.Size = new System.Drawing.Size(60, 60);
+            this.pictureBox_3th.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_3th.TabIndex = 10;
+            this.pictureBox_3th.TabStop = false;
+            this.pictureBox_3th.Tag = "";
+            // 
+            // pictureBox_2nd
+            // 
+            this.pictureBox_2nd.BackColor = System.Drawing.SystemColors.Control;
+            this.pictureBox_2nd.Location = new System.Drawing.Point(244, 234);
+            this.pictureBox_2nd.Name = "pictureBox_2nd";
+            this.pictureBox_2nd.Size = new System.Drawing.Size(60, 60);
+            this.pictureBox_2nd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_2nd.TabIndex = 9;
+            this.pictureBox_2nd.TabStop = false;
+            this.pictureBox_2nd.Tag = "";
+            // 
+            // pictureBox_1st
+            // 
+            this.pictureBox_1st.BackColor = System.Drawing.SystemColors.Control;
+            this.pictureBox_1st.Location = new System.Drawing.Point(172, 234);
+            this.pictureBox_1st.Name = "pictureBox_1st";
+            this.pictureBox_1st.Size = new System.Drawing.Size(60, 60);
+            this.pictureBox_1st.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_1st.TabIndex = 8;
+            this.pictureBox_1st.TabStop = false;
+            this.pictureBox_1st.Tag = "";
+            // 
+            // pictureBox_Random
+            // 
+            this.pictureBox_Random.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox_Random.Location = new System.Drawing.Point(42, 158);
+            this.pictureBox_Random.Name = "pictureBox_Random";
+            this.pictureBox_Random.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox_Random.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_Random.TabIndex = 1;
+            this.pictureBox_Random.TabStop = false;
+            // 
             // KaelPractice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(653, 411);
+            this.ClientSize = new System.Drawing.Size(653, 361);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label1);
@@ -344,11 +348,11 @@
             this.Name = "KaelPractice";
             this.Load += new System.EventHandler(this.KaelPractice_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KaelPractice_KeyDown);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Random)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_1st)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_2nd)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_3th)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_static)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_3th)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_2nd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_1st)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Random)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

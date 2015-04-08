@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -32,6 +33,16 @@ namespace Kael_Practice
 
         private void KaelPractice_Load(object sender, EventArgs e)
         {
+            //圆形化技能框
+            GraphicsPath gp = new GraphicsPath();
+            gp.AddEllipse(pictureBox_1st.ClientRectangle);
+            Region region = new Region(gp);
+            pictureBox_1st.Region = region;
+            pictureBox_2nd.Region = region;
+            pictureBox_3th.Region = region;
+            gp.Dispose();
+            region.Dispose();
+
             //初始化界面图标
             button_Q.Image = imageListQWER.Images[0];
             button_W.Image = imageListQWER.Images[1];
@@ -61,6 +72,11 @@ namespace Kael_Practice
         private void skillRandom()
         {
             int random = rand.Next(10);
+            //减少连续相同的随机技能可能性
+            if(random==(int)button_D.Tag)
+            {
+                random = rand.Next(10);
+            }
             pictureBox_Random.Image = imageListSKILL.Images[random];
             switch (random)
             {
