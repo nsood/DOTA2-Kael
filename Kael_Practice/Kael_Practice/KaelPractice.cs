@@ -37,12 +37,18 @@ namespace Kael_Practice
             button_W.Image = imageListQWER.Images[1];
             button_E.Image = imageListQWER.Images[2];
             button_R.Image = imageListQWER.Images[3];
+            button_D.Image = imageListQWER.Images[4];
+            button_F.Image = imageListQWER.Images[4];
             pictureBox_1st.Image = imageListQWER.Images[4];
             pictureBox_2nd.Image = imageListQWER.Images[4];
             pictureBox_3th.Image = imageListQWER.Images[4];
+            //初始化组合技能绑定乘值
             pictureBox_1st.Tag = 0;
             pictureBox_2nd.Tag = 0;
             pictureBox_3th.Tag = 0;
+            //初始化技能图片下标值
+            button_D.Tag = 10;
+            button_F.Tag = 10;
             skillRandom();
         }
 
@@ -83,11 +89,36 @@ namespace Kael_Practice
             pictureBox_2nd.Tag = pictureBox_3th.Tag;
             pictureBox_3th.Tag = tag;
         }
-
+        private void skillChanged()
+        {
+            int tmpTag=(int)button_D.Tag;
+            switch(Rvalue)
+            {
+                case 1:     tmpTag = 0; break;
+                case 27:    tmpTag = 1; break;
+                case 125:   tmpTag = 2; break;
+                case 3:     tmpTag = 3; break;
+                case 5:     tmpTag = 4; break;
+                case 9:     tmpTag = 5; break;
+                case 45:    tmpTag = 6; break;
+                case 25:    tmpTag = 7; break;
+                case 75:    tmpTag = 8; break;
+                case 15:    tmpTag = 9; break;
+                default:                break;
+            }
+            if(tmpTag!=(int)button_D.Tag && tmpTag!=(int)button_F.Tag)
+            {
+                button_F.Tag = button_D.Tag;
+                button_D.Tag = tmpTag;
+            }
+            button_D.Image = imageListDF.Images[(int)button_D.Tag];
+            button_F.Image = imageListDF.Images[(int)button_F.Tag];
+        }
         private void checkCorrect()
         {
             //技能组合检测匹配
             Rvalue = (int)pictureBox_1st.Tag * (int)pictureBox_2nd.Tag * (int)pictureBox_3th.Tag;
+            skillChanged();
             if (Rvalue == SkillValue)
             {
                 RightNumPer15++;

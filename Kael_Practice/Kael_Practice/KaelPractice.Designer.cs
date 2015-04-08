@@ -53,6 +53,7 @@
             this.button_D = new System.Windows.Forms.Button();
             this.imageListQWER = new System.Windows.Forms.ImageList(this.components);
             this.imageListSKILL = new System.Windows.Forms.ImageList(this.components);
+            this.imageListDF = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Random)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_1st)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_2nd)).BeginInit();
@@ -252,6 +253,7 @@
             // 
             // button_F
             // 
+            this.button_F.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button_F.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button_F.Location = new System.Drawing.Point(264, 349);
             this.button_F.Name = "button_F";
@@ -261,6 +263,7 @@
             // 
             // button_D
             // 
+            this.button_D.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button_D.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button_D.Location = new System.Drawing.Point(201, 349);
             this.button_D.Name = "button_D";
@@ -292,6 +295,23 @@
             this.imageListSKILL.Images.SetKeyName(7, "forge_spirit.png");
             this.imageListSKILL.Images.SetKeyName(8, "chaos_meteor.png");
             this.imageListSKILL.Images.SetKeyName(9, "deafening_blast.png");
+            this.imageListSKILL.Images.SetKeyName(10, "blank.gif");
+            // 
+            // imageListDF
+            // 
+            this.imageListDF.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListDF.ImageStream")));
+            this.imageListDF.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageListDF.Images.SetKeyName(0, "cold_snap.png");
+            this.imageListDF.Images.SetKeyName(1, "emp.png");
+            this.imageListDF.Images.SetKeyName(2, "sun_strike.png");
+            this.imageListDF.Images.SetKeyName(3, "ghost_walk.png");
+            this.imageListDF.Images.SetKeyName(4, "ice_wall.png");
+            this.imageListDF.Images.SetKeyName(5, "tornado.png");
+            this.imageListDF.Images.SetKeyName(6, "alacrity.png");
+            this.imageListDF.Images.SetKeyName(7, "forge_spirit.png");
+            this.imageListDF.Images.SetKeyName(8, "chaos_meteor.png");
+            this.imageListDF.Images.SetKeyName(9, "deafening_blast.png");
+            this.imageListDF.Images.SetKeyName(10, "blank.gif");
             // 
             // KaelPractice
             // 
@@ -359,6 +379,7 @@
         private System.Windows.Forms.Button button_D;
         private System.Windows.Forms.ImageList imageListQWER;
         private System.Windows.Forms.ImageList imageListSKILL;
+        private System.Windows.Forms.ImageList imageListDF;
     }
 }
 
