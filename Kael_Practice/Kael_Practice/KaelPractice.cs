@@ -66,6 +66,18 @@ namespace Kael_Practice
             label_key.Tag = 0;
             label_APM_valid.Tag = 0;
             skillRandom();
+            label_record.Text = "记录：\n   ";
+        }
+
+        private void updateImage()
+        {
+            pictureBox_Random.Refresh();
+            pictureBox_static.Refresh();
+            pictureBox_1st.Refresh();
+            pictureBox_2nd.Refresh();
+            pictureBox_3th.Refresh();
+            button_D.Refresh();
+            button_F.Refresh();
         }
 
         private void keyPress()
@@ -150,8 +162,6 @@ namespace Kael_Practice
             doubleNum2 = Convert.ToInt32(tmp * 10000) % 100;
             label_valid_rate_count.Text = doubleNum1.ToString()+'.'+doubleNum2.ToString() + '%';
 
-            
- 
         }
 
         private void checkCorrect()
@@ -162,24 +172,28 @@ namespace Kael_Practice
             if (Rvalue == SkillValue)
             {
                 RightNumPer10++;
-                richTextBox_record.Text += "●";
+                label_record.Text += "●";
                 RightSkillCount++;
                 skillRandom();
             }
             else
             {
-                richTextBox_record.Text += "〇";  
+                label_record.Text += "〇";
                 WrongSkillCount++;
             }
             if ((RightSkillCount+WrongSkillCount) % 10 == 0)
             {
-                richTextBox_record.Text+= '\t';
-                richTextBox_record.Text += RightNumPer10;
-                richTextBox_record.Text += " / 10";
-                richTextBox_record.Text += '\n';
+                label_record.Text += "   ";
+                label_record.Text += RightNumPer10;
+                label_record.Text += " / 10";
+                label_record.Text += "\n   ";
+
                 RightNumPer10 = 0;
             }
-            richTextBox_record.SelectionStart += richTextBox_record.Text.Length;
+            if((RightSkillCount+WrongSkillCount) == 100)
+            {
+                label_record.Text = "记录：\n   ";
+            }
             dateRerord();
         }
 
@@ -209,7 +223,7 @@ namespace Kael_Practice
                     break;
             }
 
-            this.Refresh();
+            updateImage();
         }
 
         private void timer_Tick(object sender, EventArgs e)
