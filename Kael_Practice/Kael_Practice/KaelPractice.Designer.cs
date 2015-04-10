@@ -30,7 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KaelPractice));
+            System.Windows.Forms.Timer timer;
             this.groupBox_dataRecord = new System.Windows.Forms.GroupBox();
+            this.label_record = new System.Windows.Forms.Label();
             this.label_time_count = new System.Windows.Forms.Label();
             this.label_APM_valid_count = new System.Windows.Forms.Label();
             this.label_APM_count = new System.Windows.Forms.Label();
@@ -67,9 +69,17 @@
             this.pictureBox_2nd = new System.Windows.Forms.PictureBox();
             this.pictureBox_1st = new System.Windows.Forms.PictureBox();
             this.pictureBox_Random = new System.Windows.Forms.PictureBox();
-            this.timer = new System.Windows.Forms.Timer(this.components);
-            this.label_record = new System.Windows.Forms.Label();
+            this.radioButton_limit_time = new System.Windows.Forms.RadioButton();
+            this.radioButton_limit_num = new System.Windows.Forms.RadioButton();
+            this.radioButton_endless = new System.Windows.Forms.RadioButton();
+            this.radioButton_limit_time_combo = new System.Windows.Forms.RadioButton();
+            this.radioButton_limit_num_combo = new System.Windows.Forms.RadioButton();
+            this.button_skill_remind = new System.Windows.Forms.Button();
+            this.button_start = new System.Windows.Forms.Button();
+            this.button_reset = new System.Windows.Forms.Button();
+            timer = new System.Windows.Forms.Timer(this.components);
             this.groupBox_dataRecord.SuspendLayout();
+            this.groupBox_manage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_static)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_3th)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_2nd)).BeginInit();
@@ -102,6 +112,15 @@
             this.groupBox_dataRecord.TabIndex = 0;
             this.groupBox_dataRecord.TabStop = false;
             this.groupBox_dataRecord.Text = "数据记录";
+            // 
+            // label_record
+            // 
+            this.label_record.AutoSize = true;
+            this.label_record.Location = new System.Drawing.Point(9, 204);
+            this.label_record.Name = "label_record";
+            this.label_record.Size = new System.Drawing.Size(41, 12);
+            this.label_record.TabIndex = 0;
+            this.label_record.Text = "记录：";
             // 
             // label_time_count
             // 
@@ -240,6 +259,13 @@
             // groupBox_manage
             // 
             this.groupBox_manage.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox_manage.Controls.Add(this.button_reset);
+            this.groupBox_manage.Controls.Add(this.button_start);
+            this.groupBox_manage.Controls.Add(this.radioButton_limit_num_combo);
+            this.groupBox_manage.Controls.Add(this.radioButton_limit_time_combo);
+            this.groupBox_manage.Controls.Add(this.radioButton_endless);
+            this.groupBox_manage.Controls.Add(this.radioButton_limit_num);
+            this.groupBox_manage.Controls.Add(this.radioButton_limit_time);
             this.groupBox_manage.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.groupBox_manage.Location = new System.Drawing.Point(12, 12);
             this.groupBox_manage.Name = "groupBox_manage";
@@ -482,7 +508,7 @@
             // pictureBox_Random
             // 
             this.pictureBox_Random.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox_Random.Location = new System.Drawing.Point(42, 158);
+            this.pictureBox_Random.Location = new System.Drawing.Point(34, 128);
             this.pictureBox_Random.Name = "pictureBox_Random";
             this.pictureBox_Random.Size = new System.Drawing.Size(100, 100);
             this.pictureBox_Random.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -491,17 +517,91 @@
             // 
             // timer
             // 
-            this.timer.Enabled = true;
-            this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            timer.Enabled = true;
+            timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
-            // label_record
+            // radioButton_limit_time
             // 
-            this.label_record.AutoSize = true;
-            this.label_record.Location = new System.Drawing.Point(9, 204);
-            this.label_record.Name = "label_record";
-            this.label_record.Size = new System.Drawing.Size(41, 12);
-            this.label_record.TabIndex = 0;
-            this.label_record.Text = "记录：";
+            this.radioButton_limit_time.AutoSize = true;
+            this.radioButton_limit_time.Location = new System.Drawing.Point(15, 21);
+            this.radioButton_limit_time.Name = "radioButton_limit_time";
+            this.radioButton_limit_time.Size = new System.Drawing.Size(107, 16);
+            this.radioButton_limit_time.TabIndex = 0;
+            this.radioButton_limit_time.TabStop = true;
+            this.radioButton_limit_time.Text = "限时测技能模式";
+            this.radioButton_limit_time.UseVisualStyleBackColor = true;
+            // 
+            // radioButton_limit_num
+            // 
+            this.radioButton_limit_num.AutoSize = true;
+            this.radioButton_limit_num.Location = new System.Drawing.Point(15, 49);
+            this.radioButton_limit_num.Name = "radioButton_limit_num";
+            this.radioButton_limit_num.Size = new System.Drawing.Size(107, 16);
+            this.radioButton_limit_num.TabIndex = 1;
+            this.radioButton_limit_num.TabStop = true;
+            this.radioButton_limit_num.Text = "技能数测速模式";
+            this.radioButton_limit_num.UseVisualStyleBackColor = true;
+            // 
+            // radioButton_endless
+            // 
+            this.radioButton_endless.AutoSize = true;
+            this.radioButton_endless.Location = new System.Drawing.Point(15, 78);
+            this.radioButton_endless.Name = "radioButton_endless";
+            this.radioButton_endless.Size = new System.Drawing.Size(107, 16);
+            this.radioButton_endless.TabIndex = 2;
+            this.radioButton_endless.TabStop = true;
+            this.radioButton_endless.Text = "无尽随机数模式";
+            this.radioButton_endless.UseVisualStyleBackColor = true;
+            // 
+            // radioButton_limit_time_combo
+            // 
+            this.radioButton_limit_time_combo.AutoSize = true;
+            this.radioButton_limit_time_combo.Location = new System.Drawing.Point(197, 21);
+            this.radioButton_limit_time_combo.Name = "radioButton_limit_time_combo";
+            this.radioButton_limit_time_combo.Size = new System.Drawing.Size(101, 16);
+            this.radioButton_limit_time_combo.TabIndex = 3;
+            this.radioButton_limit_time_combo.TabStop = true;
+            this.radioButton_limit_time_combo.Text = "限时COMBO模式";
+            this.radioButton_limit_time_combo.UseVisualStyleBackColor = true;
+            // 
+            // radioButton_limit_num_combo
+            // 
+            this.radioButton_limit_num_combo.AutoSize = true;
+            this.radioButton_limit_num_combo.Location = new System.Drawing.Point(197, 49);
+            this.radioButton_limit_num_combo.Name = "radioButton_limit_num_combo";
+            this.radioButton_limit_num_combo.Size = new System.Drawing.Size(101, 16);
+            this.radioButton_limit_num_combo.TabIndex = 4;
+            this.radioButton_limit_num_combo.TabStop = true;
+            this.radioButton_limit_num_combo.Text = "限数COMBO模式";
+            this.radioButton_limit_num_combo.UseVisualStyleBackColor = true;
+            // 
+            // button_skill_remind
+            // 
+            this.button_skill_remind.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.button_skill_remind.Location = new System.Drawing.Point(34, 248);
+            this.button_skill_remind.Name = "button_skill_remind";
+            this.button_skill_remind.Size = new System.Drawing.Size(100, 28);
+            this.button_skill_remind.TabIndex = 26;
+            this.button_skill_remind.Text = "技能表提示";
+            this.button_skill_remind.UseVisualStyleBackColor = true;
+            // 
+            // button_start
+            // 
+            this.button_start.Location = new System.Drawing.Point(211, 78);
+            this.button_start.Name = "button_start";
+            this.button_start.Size = new System.Drawing.Size(44, 23);
+            this.button_start.TabIndex = 5;
+            this.button_start.Text = "开始";
+            this.button_start.UseVisualStyleBackColor = true;
+            // 
+            // button_reset
+            // 
+            this.button_reset.Location = new System.Drawing.Point(275, 78);
+            this.button_reset.Name = "button_reset";
+            this.button_reset.Size = new System.Drawing.Size(44, 23);
+            this.button_reset.TabIndex = 6;
+            this.button_reset.Text = "复位";
+            this.button_reset.UseVisualStyleBackColor = true;
             // 
             // KaelPractice
             // 
@@ -510,6 +610,7 @@
             this.BackColor = System.Drawing.SystemColors.Window;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(619, 361);
+            this.Controls.Add(this.button_skill_remind);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label1);
@@ -538,6 +639,8 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KaelPractice_KeyDown);
             this.groupBox_dataRecord.ResumeLayout(false);
             this.groupBox_dataRecord.PerformLayout();
+            this.groupBox_manage.ResumeLayout(false);
+            this.groupBox_manage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_static)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_3th)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_2nd)).EndInit();
@@ -587,8 +690,15 @@
         private System.Windows.Forms.Label label_wrong_R_count;
         private System.Windows.Forms.Label label_right_R_count;
         private System.Windows.Forms.Label label_key_count;
-        private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.Label label_record;
+        private System.Windows.Forms.Button button_reset;
+        private System.Windows.Forms.Button button_start;
+        private System.Windows.Forms.RadioButton radioButton_limit_num_combo;
+        private System.Windows.Forms.RadioButton radioButton_limit_time_combo;
+        private System.Windows.Forms.RadioButton radioButton_endless;
+        private System.Windows.Forms.RadioButton radioButton_limit_num;
+        private System.Windows.Forms.RadioButton radioButton_limit_time;
+        private System.Windows.Forms.Button button_skill_remind;
     }
 }
 
