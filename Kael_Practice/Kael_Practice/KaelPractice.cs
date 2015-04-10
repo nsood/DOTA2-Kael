@@ -36,14 +36,23 @@ namespace Kael_Practice
         private void KaelPractice_Load(object sender, EventArgs e)
         {
             //圆形化技能框
-            GraphicsPath gp = new GraphicsPath();
-            gp.AddEllipse(pictureBox_1st.ClientRectangle);
-            Region region = new Region(gp);
-            pictureBox_1st.Region = region;
-            pictureBox_2nd.Region = region;
-            pictureBox_3th.Region = region;
-            gp.Dispose();
-            region.Dispose();
+            GraphicsPath gp1 = new GraphicsPath();
+            gp1.AddEllipse(pictureBox_1st.ClientRectangle);
+            Region region1 = new Region(gp1);
+            pictureBox_1st.Region = region1;
+            pictureBox_2nd.Region = region1;
+            pictureBox_3th.Region = region1;
+            gp1.Dispose();
+            region1.Dispose();
+
+            GraphicsPath gp2 = new GraphicsPath();
+            gp2.AddEllipse(pictureBox_Random_1st.ClientRectangle);
+            Region region2 = new Region(gp2);
+            pictureBox_Random_1st.Region = region2;
+            pictureBox_Random_2rd.Region = region2;
+            pictureBox_Random_3th.Region = region2;
+            gp2.Dispose();
+            region2.Dispose();
 
             //初始化界面图标
             button_Q.Image = imageListQWER.Images[0];
@@ -71,8 +80,7 @@ namespace Kael_Practice
 
         private void updateImage()
         {
-            pictureBox_Random.Refresh();
-            pictureBox_static.Refresh();
+            pictureBox_Random_2rd.Refresh();
             pictureBox_1st.Refresh();
             pictureBox_2nd.Refresh();
             pictureBox_3th.Refresh();
@@ -94,7 +102,7 @@ namespace Kael_Practice
             {
                 random = rand.Next(10);
             }
-            pictureBox_Random.Image = imageListSKILL.Images[random];
+            pictureBox_Random_2rd.Image = imageListSKILL.Images[random];
             switch (random)
             {
                 case 0: SkillValue = 1;     break;  //QQQ:  1*1*1=1

@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KaelPractice));
             System.Windows.Forms.Timer timer;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KaelPractice));
             this.groupBox_dataRecord = new System.Windows.Forms.GroupBox();
             this.label_record = new System.Windows.Forms.Label();
             this.label_time_count = new System.Windows.Forms.Label();
@@ -48,6 +48,14 @@
             this.label_right_R = new System.Windows.Forms.Label();
             this.label_key = new System.Windows.Forms.Label();
             this.groupBox_manage = new System.Windows.Forms.GroupBox();
+            this.button_skill_remind = new System.Windows.Forms.Button();
+            this.button_reset = new System.Windows.Forms.Button();
+            this.button_start = new System.Windows.Forms.Button();
+            this.radioButton_limit_num_combo = new System.Windows.Forms.RadioButton();
+            this.radioButton_limit_time_combo = new System.Windows.Forms.RadioButton();
+            this.radioButton_endless = new System.Windows.Forms.RadioButton();
+            this.radioButton_limit_num = new System.Windows.Forms.RadioButton();
+            this.radioButton_limit_time = new System.Windows.Forms.RadioButton();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -64,28 +72,27 @@
             this.imageListQWER = new System.Windows.Forms.ImageList(this.components);
             this.imageListSKILL = new System.Windows.Forms.ImageList(this.components);
             this.imageListDF = new System.Windows.Forms.ImageList(this.components);
-            this.pictureBox_static = new System.Windows.Forms.PictureBox();
             this.pictureBox_3th = new System.Windows.Forms.PictureBox();
             this.pictureBox_2nd = new System.Windows.Forms.PictureBox();
             this.pictureBox_1st = new System.Windows.Forms.PictureBox();
-            this.pictureBox_Random = new System.Windows.Forms.PictureBox();
-            this.radioButton_limit_time = new System.Windows.Forms.RadioButton();
-            this.radioButton_limit_num = new System.Windows.Forms.RadioButton();
-            this.radioButton_endless = new System.Windows.Forms.RadioButton();
-            this.radioButton_limit_time_combo = new System.Windows.Forms.RadioButton();
-            this.radioButton_limit_num_combo = new System.Windows.Forms.RadioButton();
-            this.button_skill_remind = new System.Windows.Forms.Button();
-            this.button_start = new System.Windows.Forms.Button();
-            this.button_reset = new System.Windows.Forms.Button();
+            this.pictureBox_Random_2rd = new System.Windows.Forms.PictureBox();
+            this.pictureBox_Random_1st = new System.Windows.Forms.PictureBox();
+            this.pictureBox_Random_3th = new System.Windows.Forms.PictureBox();
             timer = new System.Windows.Forms.Timer(this.components);
             this.groupBox_dataRecord.SuspendLayout();
             this.groupBox_manage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_static)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_3th)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_2nd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_1st)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Random)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Random_2rd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Random_1st)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Random_3th)).BeginInit();
             this.SuspendLayout();
+            // 
+            // timer
+            // 
+            timer.Enabled = true;
+            timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
             // groupBox_dataRecord
             // 
@@ -108,7 +115,7 @@
             this.groupBox_dataRecord.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.groupBox_dataRecord.Location = new System.Drawing.Point(388, 12);
             this.groupBox_dataRecord.Name = "groupBox_dataRecord";
-            this.groupBox_dataRecord.Size = new System.Drawing.Size(222, 345);
+            this.groupBox_dataRecord.Size = new System.Drawing.Size(230, 343);
             this.groupBox_dataRecord.TabIndex = 0;
             this.groupBox_dataRecord.TabStop = false;
             this.groupBox_dataRecord.Text = "数据记录";
@@ -259,6 +266,7 @@
             // groupBox_manage
             // 
             this.groupBox_manage.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox_manage.Controls.Add(this.button_skill_remind);
             this.groupBox_manage.Controls.Add(this.button_reset);
             this.groupBox_manage.Controls.Add(this.button_start);
             this.groupBox_manage.Controls.Add(this.radioButton_limit_num_combo);
@@ -274,13 +282,103 @@
             this.groupBox_manage.TabStop = false;
             this.groupBox_manage.Text = "模式设置";
             // 
+            // button_skill_remind
+            // 
+            this.button_skill_remind.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button_skill_remind.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_skill_remind.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button_skill_remind.ForeColor = System.Drawing.SystemColors.Info;
+            this.button_skill_remind.Location = new System.Drawing.Point(252, 18);
+            this.button_skill_remind.Name = "button_skill_remind";
+            this.button_skill_remind.Size = new System.Drawing.Size(50, 23);
+            this.button_skill_remind.TabIndex = 26;
+            this.button_skill_remind.Text = "技能表";
+            this.button_skill_remind.UseVisualStyleBackColor = true;
+            // 
+            // button_reset
+            // 
+            this.button_reset.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_reset.ForeColor = System.Drawing.SystemColors.Info;
+            this.button_reset.Location = new System.Drawing.Point(320, 50);
+            this.button_reset.Name = "button_reset";
+            this.button_reset.Size = new System.Drawing.Size(44, 23);
+            this.button_reset.TabIndex = 6;
+            this.button_reset.Text = "复位";
+            this.button_reset.UseVisualStyleBackColor = true;
+            // 
+            // button_start
+            // 
+            this.button_start.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_start.ForeColor = System.Drawing.SystemColors.Info;
+            this.button_start.Location = new System.Drawing.Point(320, 18);
+            this.button_start.Name = "button_start";
+            this.button_start.Size = new System.Drawing.Size(44, 23);
+            this.button_start.TabIndex = 5;
+            this.button_start.Text = "开始";
+            this.button_start.UseVisualStyleBackColor = true;
+            // 
+            // radioButton_limit_num_combo
+            // 
+            this.radioButton_limit_num_combo.AutoSize = true;
+            this.radioButton_limit_num_combo.Location = new System.Drawing.Point(138, 49);
+            this.radioButton_limit_num_combo.Name = "radioButton_limit_num_combo";
+            this.radioButton_limit_num_combo.Size = new System.Drawing.Size(101, 16);
+            this.radioButton_limit_num_combo.TabIndex = 4;
+            this.radioButton_limit_num_combo.TabStop = true;
+            this.radioButton_limit_num_combo.Text = "限数COMBO模式";
+            this.radioButton_limit_num_combo.UseVisualStyleBackColor = true;
+            // 
+            // radioButton_limit_time_combo
+            // 
+            this.radioButton_limit_time_combo.AutoSize = true;
+            this.radioButton_limit_time_combo.Location = new System.Drawing.Point(138, 21);
+            this.radioButton_limit_time_combo.Name = "radioButton_limit_time_combo";
+            this.radioButton_limit_time_combo.Size = new System.Drawing.Size(101, 16);
+            this.radioButton_limit_time_combo.TabIndex = 3;
+            this.radioButton_limit_time_combo.TabStop = true;
+            this.radioButton_limit_time_combo.Text = "限时COMBO模式";
+            this.radioButton_limit_time_combo.UseVisualStyleBackColor = true;
+            // 
+            // radioButton_endless
+            // 
+            this.radioButton_endless.AutoSize = true;
+            this.radioButton_endless.Location = new System.Drawing.Point(15, 78);
+            this.radioButton_endless.Name = "radioButton_endless";
+            this.radioButton_endless.Size = new System.Drawing.Size(107, 16);
+            this.radioButton_endless.TabIndex = 2;
+            this.radioButton_endless.TabStop = true;
+            this.radioButton_endless.Text = "无尽随机数模式";
+            this.radioButton_endless.UseVisualStyleBackColor = true;
+            // 
+            // radioButton_limit_num
+            // 
+            this.radioButton_limit_num.AutoSize = true;
+            this.radioButton_limit_num.Location = new System.Drawing.Point(15, 49);
+            this.radioButton_limit_num.Name = "radioButton_limit_num";
+            this.radioButton_limit_num.Size = new System.Drawing.Size(107, 16);
+            this.radioButton_limit_num.TabIndex = 1;
+            this.radioButton_limit_num.TabStop = true;
+            this.radioButton_limit_num.Text = "技能数测速模式";
+            this.radioButton_limit_num.UseVisualStyleBackColor = true;
+            // 
+            // radioButton_limit_time
+            // 
+            this.radioButton_limit_time.AutoSize = true;
+            this.radioButton_limit_time.Location = new System.Drawing.Point(15, 21);
+            this.radioButton_limit_time.Name = "radioButton_limit_time";
+            this.radioButton_limit_time.Size = new System.Drawing.Size(107, 16);
+            this.radioButton_limit_time.TabIndex = 0;
+            this.radioButton_limit_time.TabStop = true;
+            this.radioButton_limit_time.Text = "限时测技能模式";
+            this.radioButton_limit_time.UseVisualStyleBackColor = true;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label5.Location = new System.Drawing.Point(253, 297);
+            this.label5.Location = new System.Drawing.Point(252, 295);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(14, 17);
             this.label5.TabIndex = 16;
@@ -292,7 +390,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label6.Location = new System.Drawing.Point(316, 297);
+            this.label6.Location = new System.Drawing.Point(315, 295);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(16, 17);
             this.label6.TabIndex = 17;
@@ -304,7 +402,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label4.Location = new System.Drawing.Point(190, 297);
+            this.label4.Location = new System.Drawing.Point(189, 295);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(17, 17);
             this.label4.TabIndex = 15;
@@ -316,7 +414,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label3.Location = new System.Drawing.Point(127, 297);
+            this.label3.Location = new System.Drawing.Point(126, 295);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(15, 17);
             this.label3.TabIndex = 14;
@@ -329,7 +427,7 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label1.Location = new System.Drawing.Point(1, 297);
+            this.label1.Location = new System.Drawing.Point(0, 295);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(18, 17);
             this.label1.TabIndex = 12;
@@ -341,7 +439,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label2.Location = new System.Drawing.Point(61, 297);
+            this.label2.Location = new System.Drawing.Point(60, 295);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(20, 17);
             this.label2.TabIndex = 13;
@@ -352,7 +450,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label7.Location = new System.Drawing.Point(17, 252);
+            this.label7.Location = new System.Drawing.Point(68, 252);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(0, 24);
             this.label7.TabIndex = 19;
@@ -362,7 +460,7 @@
             this.button_Q.BackColor = System.Drawing.Color.Transparent;
             this.button_Q.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button_Q.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_Q.Location = new System.Drawing.Point(12, 307);
+            this.button_Q.Location = new System.Drawing.Point(11, 305);
             this.button_Q.Name = "button_Q";
             this.button_Q.Size = new System.Drawing.Size(50, 50);
             this.button_Q.TabIndex = 20;
@@ -372,7 +470,7 @@
             // 
             this.button_W.BackColor = System.Drawing.Color.Transparent;
             this.button_W.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_W.Location = new System.Drawing.Point(75, 307);
+            this.button_W.Location = new System.Drawing.Point(74, 305);
             this.button_W.Name = "button_W";
             this.button_W.Size = new System.Drawing.Size(50, 50);
             this.button_W.TabIndex = 21;
@@ -382,7 +480,7 @@
             // 
             this.button_E.BackColor = System.Drawing.Color.Transparent;
             this.button_E.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_E.Location = new System.Drawing.Point(138, 307);
+            this.button_E.Location = new System.Drawing.Point(137, 305);
             this.button_E.Name = "button_E";
             this.button_E.Size = new System.Drawing.Size(50, 50);
             this.button_E.TabIndex = 22;
@@ -392,7 +490,7 @@
             // 
             this.button_R.BackColor = System.Drawing.Color.Transparent;
             this.button_R.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_R.Location = new System.Drawing.Point(327, 307);
+            this.button_R.Location = new System.Drawing.Point(326, 305);
             this.button_R.Name = "button_R";
             this.button_R.Size = new System.Drawing.Size(50, 50);
             this.button_R.TabIndex = 25;
@@ -403,7 +501,7 @@
             this.button_F.BackColor = System.Drawing.Color.Transparent;
             this.button_F.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button_F.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_F.Location = new System.Drawing.Point(264, 307);
+            this.button_F.Location = new System.Drawing.Point(263, 305);
             this.button_F.Name = "button_F";
             this.button_F.Size = new System.Drawing.Size(50, 50);
             this.button_F.TabIndex = 24;
@@ -414,7 +512,7 @@
             this.button_D.BackColor = System.Drawing.Color.Transparent;
             this.button_D.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button_D.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_D.Location = new System.Drawing.Point(201, 307);
+            this.button_D.Location = new System.Drawing.Point(200, 305);
             this.button_D.Name = "button_D";
             this.button_D.Size = new System.Drawing.Size(50, 50);
             this.button_D.TabIndex = 23;
@@ -462,20 +560,10 @@
             this.imageListDF.Images.SetKeyName(9, "deafening_blast.png");
             this.imageListDF.Images.SetKeyName(10, "blank.gif");
             // 
-            // pictureBox_static
-            // 
-            this.pictureBox_static.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox_static.Location = new System.Drawing.Point(172, 128);
-            this.pictureBox_static.Name = "pictureBox_static";
-            this.pictureBox_static.Size = new System.Drawing.Size(210, 100);
-            this.pictureBox_static.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox_static.TabIndex = 18;
-            this.pictureBox_static.TabStop = false;
-            // 
             // pictureBox_3th
             // 
             this.pictureBox_3th.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox_3th.Location = new System.Drawing.Point(316, 234);
+            this.pictureBox_3th.Location = new System.Drawing.Point(208, 234);
             this.pictureBox_3th.Name = "pictureBox_3th";
             this.pictureBox_3th.Size = new System.Drawing.Size(60, 60);
             this.pictureBox_3th.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -486,7 +574,7 @@
             // pictureBox_2nd
             // 
             this.pictureBox_2nd.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox_2nd.Location = new System.Drawing.Point(244, 234);
+            this.pictureBox_2nd.Location = new System.Drawing.Point(136, 234);
             this.pictureBox_2nd.Name = "pictureBox_2nd";
             this.pictureBox_2nd.Size = new System.Drawing.Size(60, 60);
             this.pictureBox_2nd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -497,7 +585,7 @@
             // pictureBox_1st
             // 
             this.pictureBox_1st.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox_1st.Location = new System.Drawing.Point(172, 234);
+            this.pictureBox_1st.Location = new System.Drawing.Point(64, 234);
             this.pictureBox_1st.Name = "pictureBox_1st";
             this.pictureBox_1st.Size = new System.Drawing.Size(60, 60);
             this.pictureBox_1st.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -505,103 +593,35 @@
             this.pictureBox_1st.TabStop = false;
             this.pictureBox_1st.Tag = "";
             // 
-            // pictureBox_Random
+            // pictureBox_Random_2rd
             // 
-            this.pictureBox_Random.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox_Random.Location = new System.Drawing.Point(34, 128);
-            this.pictureBox_Random.Name = "pictureBox_Random";
-            this.pictureBox_Random.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox_Random.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox_Random.TabIndex = 1;
-            this.pictureBox_Random.TabStop = false;
+            this.pictureBox_Random_2rd.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox_Random_2rd.Location = new System.Drawing.Point(116, 128);
+            this.pictureBox_Random_2rd.Name = "pictureBox_Random_2rd";
+            this.pictureBox_Random_2rd.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox_Random_2rd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_Random_2rd.TabIndex = 1;
+            this.pictureBox_Random_2rd.TabStop = false;
             // 
-            // timer
+            // pictureBox_Random_1st
             // 
-            timer.Enabled = true;
-            timer.Tick += new System.EventHandler(this.timer_Tick);
+            this.pictureBox_Random_1st.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox_Random_1st.Location = new System.Drawing.Point(10, 128);
+            this.pictureBox_Random_1st.Name = "pictureBox_Random_1st";
+            this.pictureBox_Random_1st.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox_Random_1st.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_Random_1st.TabIndex = 26;
+            this.pictureBox_Random_1st.TabStop = false;
             // 
-            // radioButton_limit_time
+            // pictureBox_Random_3th
             // 
-            this.radioButton_limit_time.AutoSize = true;
-            this.radioButton_limit_time.Location = new System.Drawing.Point(15, 21);
-            this.radioButton_limit_time.Name = "radioButton_limit_time";
-            this.radioButton_limit_time.Size = new System.Drawing.Size(107, 16);
-            this.radioButton_limit_time.TabIndex = 0;
-            this.radioButton_limit_time.TabStop = true;
-            this.radioButton_limit_time.Text = "限时测技能模式";
-            this.radioButton_limit_time.UseVisualStyleBackColor = true;
-            // 
-            // radioButton_limit_num
-            // 
-            this.radioButton_limit_num.AutoSize = true;
-            this.radioButton_limit_num.Location = new System.Drawing.Point(15, 49);
-            this.radioButton_limit_num.Name = "radioButton_limit_num";
-            this.radioButton_limit_num.Size = new System.Drawing.Size(107, 16);
-            this.radioButton_limit_num.TabIndex = 1;
-            this.radioButton_limit_num.TabStop = true;
-            this.radioButton_limit_num.Text = "技能数测速模式";
-            this.radioButton_limit_num.UseVisualStyleBackColor = true;
-            // 
-            // radioButton_endless
-            // 
-            this.radioButton_endless.AutoSize = true;
-            this.radioButton_endless.Location = new System.Drawing.Point(15, 78);
-            this.radioButton_endless.Name = "radioButton_endless";
-            this.radioButton_endless.Size = new System.Drawing.Size(107, 16);
-            this.radioButton_endless.TabIndex = 2;
-            this.radioButton_endless.TabStop = true;
-            this.radioButton_endless.Text = "无尽随机数模式";
-            this.radioButton_endless.UseVisualStyleBackColor = true;
-            // 
-            // radioButton_limit_time_combo
-            // 
-            this.radioButton_limit_time_combo.AutoSize = true;
-            this.radioButton_limit_time_combo.Location = new System.Drawing.Point(197, 21);
-            this.radioButton_limit_time_combo.Name = "radioButton_limit_time_combo";
-            this.radioButton_limit_time_combo.Size = new System.Drawing.Size(101, 16);
-            this.radioButton_limit_time_combo.TabIndex = 3;
-            this.radioButton_limit_time_combo.TabStop = true;
-            this.radioButton_limit_time_combo.Text = "限时COMBO模式";
-            this.radioButton_limit_time_combo.UseVisualStyleBackColor = true;
-            // 
-            // radioButton_limit_num_combo
-            // 
-            this.radioButton_limit_num_combo.AutoSize = true;
-            this.radioButton_limit_num_combo.Location = new System.Drawing.Point(197, 49);
-            this.radioButton_limit_num_combo.Name = "radioButton_limit_num_combo";
-            this.radioButton_limit_num_combo.Size = new System.Drawing.Size(101, 16);
-            this.radioButton_limit_num_combo.TabIndex = 4;
-            this.radioButton_limit_num_combo.TabStop = true;
-            this.radioButton_limit_num_combo.Text = "限数COMBO模式";
-            this.radioButton_limit_num_combo.UseVisualStyleBackColor = true;
-            // 
-            // button_skill_remind
-            // 
-            this.button_skill_remind.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.button_skill_remind.Location = new System.Drawing.Point(34, 248);
-            this.button_skill_remind.Name = "button_skill_remind";
-            this.button_skill_remind.Size = new System.Drawing.Size(100, 28);
-            this.button_skill_remind.TabIndex = 26;
-            this.button_skill_remind.Text = "技能表提示";
-            this.button_skill_remind.UseVisualStyleBackColor = true;
-            // 
-            // button_start
-            // 
-            this.button_start.Location = new System.Drawing.Point(211, 78);
-            this.button_start.Name = "button_start";
-            this.button_start.Size = new System.Drawing.Size(44, 23);
-            this.button_start.TabIndex = 5;
-            this.button_start.Text = "开始";
-            this.button_start.UseVisualStyleBackColor = true;
-            // 
-            // button_reset
-            // 
-            this.button_reset.Location = new System.Drawing.Point(275, 78);
-            this.button_reset.Name = "button_reset";
-            this.button_reset.Size = new System.Drawing.Size(44, 23);
-            this.button_reset.TabIndex = 6;
-            this.button_reset.Text = "复位";
-            this.button_reset.UseVisualStyleBackColor = true;
+            this.pictureBox_Random_3th.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox_Random_3th.Location = new System.Drawing.Point(222, 128);
+            this.pictureBox_Random_3th.Name = "pictureBox_Random_3th";
+            this.pictureBox_Random_3th.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox_Random_3th.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_Random_3th.TabIndex = 27;
+            this.pictureBox_Random_3th.TabStop = false;
             // 
             // KaelPractice
             // 
@@ -610,7 +630,8 @@
             this.BackColor = System.Drawing.SystemColors.Window;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(619, 361);
-            this.Controls.Add(this.button_skill_remind);
+            this.Controls.Add(this.pictureBox_Random_3th);
+            this.Controls.Add(this.pictureBox_Random_1st);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label1);
@@ -624,12 +645,11 @@
             this.Controls.Add(this.button_W);
             this.Controls.Add(this.button_Q);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.pictureBox_static);
             this.Controls.Add(this.groupBox_manage);
             this.Controls.Add(this.pictureBox_3th);
             this.Controls.Add(this.pictureBox_2nd);
             this.Controls.Add(this.pictureBox_1st);
-            this.Controls.Add(this.pictureBox_Random);
+            this.Controls.Add(this.pictureBox_Random_2rd);
             this.Controls.Add(this.groupBox_dataRecord);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
@@ -641,11 +661,12 @@
             this.groupBox_dataRecord.PerformLayout();
             this.groupBox_manage.ResumeLayout(false);
             this.groupBox_manage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_static)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_3th)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_2nd)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_1st)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Random)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Random_2rd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Random_1st)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Random_3th)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -654,7 +675,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox_dataRecord;
-        private System.Windows.Forms.PictureBox pictureBox_Random;
+        private System.Windows.Forms.PictureBox pictureBox_Random_2rd;
         private System.Windows.Forms.PictureBox pictureBox_1st;
         private System.Windows.Forms.PictureBox pictureBox_2nd;
         private System.Windows.Forms.PictureBox pictureBox_3th;
@@ -665,7 +686,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.PictureBox pictureBox_static;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button_Q;
         private System.Windows.Forms.Button button_W;
@@ -699,6 +719,8 @@
         private System.Windows.Forms.RadioButton radioButton_limit_num;
         private System.Windows.Forms.RadioButton radioButton_limit_time;
         private System.Windows.Forms.Button button_skill_remind;
+        private System.Windows.Forms.PictureBox pictureBox_Random_1st;
+        private System.Windows.Forms.PictureBox pictureBox_Random_3th;
     }
 }
 
